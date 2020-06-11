@@ -42,6 +42,7 @@ namespace DataStructures.Arrays
             for (int i = 0; i < triangle.Count; i++)
                 for (int j = 0; j < triangle[i].Count; j++)
                     Console.Write(triangle[i][j] + " ");
+            Console.WriteLine();
         }
     }
 }
