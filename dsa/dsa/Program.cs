@@ -1,7 +1,10 @@
 ﻿using System;
 using DataStructures.Arrays;
+using dsa.Algorithms.Searching;
 using dsa.Arrays;
+using dsa.Arrays.Strings;
 using dsa.LinkedList;
+using dsa.Trees;
 
 namespace DataStructures
 {
@@ -29,6 +32,24 @@ namespace DataStructures
 
             ReversedLinkedList rl = new ReversedLinkedList();
             rl.reversedList();
+
+            ReverseNumber rn = new ReverseNumber();
+            rn.ReverseANumber(12345);
+
+            LinearSearch ls = new LinearSearch();
+            BinarySearch bs = new BinarySearch();
+
+            ZigZag zz = new ZigZag();
+            Console.WriteLine(zz.Convert("PAYPALISHIRING", 3));
+
+            BinaryTree bt = new BinaryTree();
+            bt.InorderTraverse(bt.root);
+            Console.WriteLine();
+            bt.PreorderTraverse(bt.root);
+            Console.WriteLine();
+            bt.PostorderTraverse(bt.root);
+
+            RotateArray ra= new RotateArray(3);
         }
     }
 }

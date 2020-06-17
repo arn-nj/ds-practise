@@ -7,5 +7,9 @@
 
   <ItemGroup>
     <Folder Include="LinkedList\" />
+    <Folder Include="Algorithms\Searching\" />
+    <Folder Include="Arrays\SlidingWindow\" />
+    <Folder Include="Arrays\Strings\" />
+    <Folder Include="Trees\" />
   </ItemGroup>
 </Project>
