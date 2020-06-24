@@ -2,6 +2,7 @@
 using DataStructures.Arrays;
 using dsa.Algorithms.Searching;
 using dsa.Arrays;
+using dsa.Arrays.SlidingWindow;
 using dsa.Arrays.Strings;
 using dsa.LinkedList;
 using dsa.Trees;
@@ -50,6 +51,12 @@ namespace DataStructures
             bt.PostorderTraverse(bt.root);
 
             RotateArray ra= new RotateArray(3);
+            //SearchRotatedArray sr = new SearchRotatedArray(3);
+            //Console.WriteLine(sr.Find());
+
+            FindSumSarray fS = new FindSumSarray();
+            MaxSumSubArray mxSum = new MaxSumSubArray();
         }
     }
+    
 }

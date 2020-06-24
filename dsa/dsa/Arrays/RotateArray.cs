@@ -9,7 +9,7 @@ namespace dsa.Arrays
         {
             times = k;
             Console.WriteLine($"Rotate Array {k} times");
-            Method3();
+            Method4();
             Print();
 
         }
@@ -78,6 +78,61 @@ namespace dsa.Arrays
                     j = k;
                 }
                 Array[j] = temp;
+            }
+        }
+        //Reversal Algorithm
+        public void Method4()
+        {
+            reverseArray(Array, 0, times - 1);
+            reverseArray(Array, times, Array.Length - 1);
+            reverseArray(Array, 0, Array.Length - 1);
+
+        }
+
+        public void Method5()
+        {
+            int i = times; 
+            int j = Array.Length - times;
+
+            while (i != j)
+            {
+                if (i < j)//A is shorter
+                {
+                    Swap(Array, times - i, times + j - 1, i);
+                    j = j - i;
+                }
+                else
+                {
+                    Swap(Array, times - i, times, j);
+                    i = i - j;
+                }
+            }
+            Swap(Array, times - i, times, i);
+        }
+
+        private void Swap(int[] arr, int fi, int si, int d)
+        {
+                int i, temp;
+                for (i = 0; i < d; i++)
+                {
+                    temp = arr[fi + i];
+                    arr[fi + i] = arr[si + i];
+                    arr[si + i] = temp;
+                }
+            
+        }
+
+        private void reverseArray(int[] array, int v1, int v2)
+        {
+            int low = v1;
+            int high = v2;
+            while (low <= high)
+            {
+                int temp = array[low];
+                array[low] = array[high];
+                array[high] = temp;
+                low++;
+                high--;
             }
         }
 
